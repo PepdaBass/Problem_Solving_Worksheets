@@ -102,43 +102,58 @@
 #     print('Failure! You do not understand the concept!')
 
 
-# Worksheet Two
+# # Worksheet Two
 
-# 1. Happy Numbers
+# # 1. Happy Numbers
 
-user_happy_input = input('Please enter any number: ')
-original_input = user_happy_input
-length_of_user_happy_input = len(user_happy_input)
-is_happy_or_no = False
-happy_or_sad = int(user_happy_input)
+# user_happy_input = input('Please enter any number: ')
+# original_input = user_happy_input
+# is_happy_or_no = False
+# happy_or_sad = int(user_happy_input)
+
+# # The while loop checks to see if an entered number is a happy number. If the sum of the squares of each digit equal 1,
+# # the number is considered happy. If the number loops around (as far as I know always hitting 4 at some point), it is 
+# # considered a sad number. 
+# # This code puts the answers to the exponents in a list, then adds the list together and repeats until a 1 or 4 is hit.
+
+# while is_happy_or_no is False:
+#     index = 0
+#     new_number_list = []
+#     if happy_or_sad == 1:
+#         is_happy_or_no = True
+#         print(f'{original_input} is a happy number!')
+#     elif happy_or_sad >= 10:
+#         for number in user_happy_input:
+#             equation = (int(user_happy_input[index]) * int(user_happy_input[index]))
+#             index += 1
+#             new_number_list.append(equation)
+#         happy_or_sad = 0
+#         index = 0
+#         for number in new_number_list:
+#             happy_or_sad += new_number_list[index]
+#             index += 1
+#         user_happy_input = str(happy_or_sad)
+#     elif user_happy_input == '4':
+#         is_happy_or_no = True
+#         print(f'{original_input} is a sad number...')
+#     elif len(user_happy_input) == 1 and happy_or_sad != 1:
+#         index = 0
+#         happy_or_sad = (int(user_happy_input[index]) * int(user_happy_input[index]))
+#         user_happy_input = str(happy_or_sad)
 
 
+# 2 Prime Numbers 1 - 100
 
-while is_happy_or_no is False:
-    index = 0
-    new_number_list = []
-    if happy_or_sad == 1:
-        is_happy_or_no = True
-        print(f'{original_input} is a happy number!')
-    elif happy_or_sad >= 10:
-        for number in user_happy_input:
-            equation = (int(user_happy_input[index]) * int(user_happy_input[index]))
-            index += 1
-            new_number_list.append(equation)
-        happy_or_sad = 0
-        index = 0
-        for number in new_number_list:
-            happy_or_sad += new_number_list[index]
-            index += 1
-        user_happy_input = str(happy_or_sad)
-    elif user_happy_input == '4':
-        is_happy_or_no = True
-        print(f'{original_input} is a sad number...')
-    elif len(user_happy_input) == 1 and happy_or_sad != 1:
-        index = 0
-        happy_or_sad = (int(user_happy_input[index]) * int(user_happy_input[index]))
-        user_happy_input = str(happy_or_sad)
-    
+# Used simple moduluses to find primes larger than 10 and hardcoded the primes less than 10.
+
+for number in range(1, 101):
+    if number < 10 and (number == 2 or number == 3 or number == 5 or number == 7):
+        print(number)
+    elif number >= 10 and (number % 2 == 0 or number % 3 == 0 or number % 5 == 0):
+        continue
+    elif number >= 10 and (number % 2 != 0 or number % 3 != 0 or number % 5 != 0):
+        print(number)
+        
 
 
 
