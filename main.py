@@ -106,18 +106,26 @@
 
 # 1. Happy Numbers
 
-user_happy_input = input('Please enter any number: ')
+user_happy_input = '123' #input('Please enter any number: ')
+length_of_user_happy_input = len(user_happy_input)
 happy_number = ''
 sad_number = ''
+
 
 # is_happy_or_sad = False
 # while is_happy_or_sad is False:
 #     if 
-for index in user_happy_input:
-    if index <= len(user_happy_input):
-        equation = (user_happy_input[0] * user_happy_input[0])
-        index += 1
-    elif 
+def make_number_list(user_happy_input):
+    new_number = []
+    index = 0
+    for number in user_happy_input:
+        if length_of_user_happy_input <= len(user_happy_input):
+            equation = (int(user_happy_input[index]) * int(user_happy_input[index]))
+            index += 1
+            new_number.append(equation)
+    return new_number
+print(new_number)
+
 
 
 
