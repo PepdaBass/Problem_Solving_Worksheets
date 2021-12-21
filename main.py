@@ -106,25 +106,42 @@
 
 # 1. Happy Numbers
 
-user_happy_input = '123' #input('Please enter any number: ')
+user_happy_input = input('Please enter any number: ')
+original_input = user_happy_input
 length_of_user_happy_input = len(user_happy_input)
-happy_number = ''
-sad_number = ''
+is_happy_or_no = False
+happy_or_sad = int(user_happy_input)
 
 
-# is_happy_or_sad = False
-# while is_happy_or_sad is False:
-#     if 
-def make_number_list(user_happy_input):
-    new_number = []
+
+while is_happy_or_no is False:
     index = 0
-    for number in user_happy_input:
-        if length_of_user_happy_input <= len(user_happy_input):
+    new_number_list = []
+    if happy_or_sad == 1:
+        is_happy_or_no = True
+        print(f'{original_input} is a happy number!')
+    elif happy_or_sad >= 10:
+        for number in user_happy_input:
             equation = (int(user_happy_input[index]) * int(user_happy_input[index]))
             index += 1
-            new_number.append(equation)
-    return new_number
-print(new_number)
+            new_number_list.append(equation)
+        happy_or_sad = 0
+        index = 0
+        for number in new_number_list:
+            happy_or_sad += new_number_list[index]
+            index += 1
+        user_happy_input = str(happy_or_sad)
+    elif user_happy_input == '4':
+        is_happy_or_no = True
+        print(f'{original_input} is a sad number...')
+    elif len(user_happy_input) == 1 and happy_or_sad != 1:
+        index = 0
+        happy_or_sad = (int(user_happy_input[index]) * int(user_happy_input[index]))
+        user_happy_input = str(happy_or_sad)
+    
+
+
+
 
 
 
