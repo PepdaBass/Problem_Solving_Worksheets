@@ -15,24 +15,24 @@ while backwards is True:
         print(backword)
 
 
-# # 2. Capitalize all words entered
+# 2. Capitalize all words entered
 
-# some_string = input('Enter some words: ')
-# length_of_string = len(some_string)
+some_string = input('Enter some words: ')
+length_of_string = len(some_string)
 
-# final_result = ''
+final_result = ''
 
-# for index in range(length_of_string):
-#     if index == 0:
-#         final_result += some_string[index].capitalize()
-#     elif index >= 1 and some_string[index - 1] == ' ':
-#         final_result += some_string[index].capitalize()
-#     elif index >= 1 and some_string[index] != ' ':
-#         final_result += some_string[index]
-#     elif index >= 1 and some_string[index] == ' ':
-#         final_result += some_string[index]
+for index in range(length_of_string):
+    if index == 0:
+        final_result += some_string[index].capitalize()
+    elif index >= 1 and some_string[index - 1] == ' ':
+        final_result += some_string[index].capitalize()
+    elif index >= 1 and some_string[index] != ' ':
+        final_result += some_string[index]
+    elif index >= 1 and some_string[index] == ' ':
+        final_result += some_string[index]
        
-# print(final_result)
+print(final_result)
     
 
 # 3. Compressor
@@ -40,33 +40,43 @@ while backwards is True:
 uncompressed_string = input('Enter a series of letters, some repeated: ')
 index = 0
 compressed_string = uncompressed_string[index]
+final_compressed = ''
 string_length = len(uncompressed_string)
 compressed_yet = False
 
 while compressed_yet is False:
     index += 1
-    if uncompressed_string[index] == compressed_string[-1]:
+    if index == len(uncompressed_string):
+        final_compressed += str(len(compressed_string)) + compressed_string[0] 
+        compressed_string = ''
+        compressed_yet = True
+    elif uncompressed_string[index] == compressed_string[-1]:
         compressed_string += uncompressed_string[index]
-    # elif uncompressed_string[index] == compressed_string[-1]:
-        # figure out how to add number and remove superfluous letters.
+    elif uncompressed_string[index] != compressed_string[-1]:
+        final_compressed += str(len(compressed_string)) + compressed_string[0] 
+        compressed_string = ''
+        compressed_string += uncompressed_string[index]
 
-# # 4. Palindrome Checker
+print(final_compressed)
+        
 
-# palindrome = input('Enter a word a word you believe to be a palindrome: ')
-# backwards = True
-# top_number = len(palindrome)
-# index_number = -1
-# emordnilap = ''
-# while backwards is True:
-#     if top_number >= 1:
-#         emordnilap += palindrome[index_number]
-#         top_number += -1
-#         index_number += -1
-#     else:
-#         backwards = False
-#         print(emordnilap)
+# 4. Palindrome Checker
 
-# if palindrome == emordnilap:
-#     print('Congratulations, this is a palindrome!')
-# else:
-#     print('Failure! You do not understand the concept!')
+palindrome = input('Enter a word a word you believe to be a palindrome: ')
+backwards = True
+top_number = len(palindrome)
+index_number = -1
+emordnilap = ''
+while backwards is True:
+    if top_number >= 1:
+        emordnilap += palindrome[index_number]
+        top_number += -1
+        index_number += -1
+    else:
+        backwards = False
+        print(emordnilap)
+
+if palindrome == emordnilap:
+    print('Congratulations, this is a palindrome!')
+else:
+    print('Failure! You do not understand the concept!')
