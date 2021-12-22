@@ -155,9 +155,20 @@
 #         print(number)
         
 
+# 3. Fibonacci Sequence
+
+fibo_number = [1]
+fibonacci_fun = False
 
 
-
+while fibonacci_fun is False:
+    if fibo_number[-1] == 1:
+        fibo_number.append(1)
+    if len(fibo_number) > 12:
+        fibonacci_fun = True
+    elif len(fibo_number) > 1:
+        fibo_number.append((fibo_number[-1] + fibo_number[-2]))
+print(fibo_number)
 
 
 
