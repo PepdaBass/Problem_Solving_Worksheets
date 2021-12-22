@@ -163,6 +163,8 @@ fibo_number.append(add_fibo_number)
 fibonacci_fun = False
 fibonacci_string = ''
 
+# Takes the user input number and adds the current number with the previous number in a loop, the first number of the
+# sequence being added with zero.
 
 while fibonacci_fun is False:
     if fibo_number[-1] == add_fibo_number:
@@ -171,6 +173,8 @@ while fibonacci_fun is False:
         fibonacci_fun = True
     elif len(fibo_number) > 1:
         fibo_number.append((fibo_number[-1] + fibo_number[-2]))
+
+# This loop puts the fibonacci sequence list into a string.
 
 make_fibo_string = False
 while make_fibo_string is False:
