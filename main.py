@@ -142,17 +142,17 @@
 #         user_happy_input = str(happy_or_sad)
 
 
-# 2 Prime Numbers 1 - 100
+# # 2 Prime Numbers 1 - 100
 
-# Used simple moduluses to find primes larger than 10 and hardcoded the primes less than 10.
+# # Used simple moduluses to find primes larger than 10 and hardcoded the primes less than 10.
 
-for number in range(1, 101):
-    if number < 10 and (number == 2 or number == 3 or number == 5 or number == 7):
-        print(number)
-    elif number >= 10 and (number % 2 == 0 or number % 3 == 0 or number % 5 == 0):
-        continue
-    elif number >= 10 and (number % 2 != 0 or number % 3 != 0 or number % 5 != 0):
-        print(number)
+# for number in range(1, 101):
+#     if number < 10 and (number == 2 or number == 3 or number == 5 or number == 7):
+#         print(number)
+#     elif number >= 10 and (number % 2 == 0 or number % 3 == 0 or number % 5 == 0 or number % 7 == 0):
+#         continue
+#     elif number >= 10 and (number % 2 != 0 or number % 3 != 0 or number % 5 != 0 or number % 7 != 0):
+#         print(number)
         
 
 
