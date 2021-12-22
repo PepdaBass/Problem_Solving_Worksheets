@@ -42,7 +42,22 @@ for index in range(length_of_string):
        
 print(final_result)
     
+phrase = "hello world"
 
+def first_letter_cap():
+    processed_string = ""
+    previous_letter = " "
+    for letter in phrase:
+        if previous_letter == " ":
+            cap_letter = letter.upper()
+            processed_string += cap_letter
+            previous_letter = letter
+        else:
+            processed_string += letter
+            previous_letter = letter
+    print(processed_string)
+
+first_letter_cap()
 # 3. Compressor
 
 uncompressed_string = input('Enter a series of letters, some repeated: ')
@@ -76,8 +91,21 @@ while compressed_yet is False:
         compressed_string += uncompressed_string[index]
 
 print(final_compressed)
-        
+a_string = input("enter a string to be compressed")        
+def compress_a_string(a_string):
+    final_string = ""
+    current_count = 0
+    previous_letter = a_string[0]
+    for letter in a_string:
+        if letter == previous_letter:
+            current_count += 1
+        else:
+            final_string += str(current_count) + previous_letter
+            current_count = 1
+            previous_letter = letter
+    print(final_string)
 
+compress_a_string()
 # 4. Palindrome Checker
 
 palindrome = input('Enter a word a word you believe to be a palindrome: ')
